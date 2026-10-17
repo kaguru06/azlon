@@ -60,6 +60,24 @@
     .btn-tiktok { background-color: #000000; color: #ffffff; border: 1px solid #333333; }
     .btn-tiktok:hover { background-color: #111111; transform: translateY(-2px); }
 
+    /* Custom Navigation & Button Zoom Effects */
+    .nav-link {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav-link:hover {
+      transform: scale(1.08);
+      color: #16a34a;
+    }
+    .btn-zoom {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-zoom:hover {
+      transform: scale(1.06);
+    }
+    .btn-zoom:active {
+      transform: scale(0.96);
+    }
+
     @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fade-up,.slide-in,.word,.reveal{opacity:1;transform:none}}
   </style>
 </head>
@@ -70,39 +88,46 @@
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">A</div>
-          <div>
-            <span class="text-xl font-bold tracking-tight text-gray-900 block leading-none">AZLON LIMITED</span>
-            <span class="text-xs text-brand-700 font-semibold uppercase tracking-wider">Non Woven Bags (Uhuru Bags) Manufacturer</span>
+        <!-- Logo AZ Combination Mark -->
+        <a href="#home" class="flex items-center gap-3.5 group transition transform hover:scale-105 duration-200">
+          <div class="w-11 h-11 bg-gradient-to-br from-brand-600 via-emerald-600 to-brand-800 rounded-xl flex items-center justify-center text-white shadow-md group-hover:shadow-lg transition">
+            <svg class="w-7 h-7 text-white" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Geometric combined AZ emblem -->
+              <path d="M 22 78 L 50 18 L 78 78 L 62 78 L 50 50 L 38 78 Z" fill="currentColor"/>
+              <path d="M 32 38 L 68 38 L 32 68 L 68 68" stroke="#10b981" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </div>
-        </div>
+          <div>
+            <span class="text-xl font-black tracking-tight text-gray-900 block leading-none group-hover:text-brand-600 transition">AZLON LIMITED</span>
+            <span class="text-[10px] text-brand-700 font-bold uppercase tracking-wider block mt-0.5">Non Woven Bags (Uhuru Bags) Manufacturer</span>
+          </div>
+        </a>
 
-        <nav class="hidden md:flex items-center gap-8 font-medium text-gray-600">
-          <a href="#home" class="hover:text-brand-600 transition">Home</a>
-          <a href="#catalog" class="hover:text-brand-600 transition">Products &amp; Sizes</a>
-          <a href="#about" class="hover:text-brand-600 transition">Factory Info</a>
-          <a href="#contact" class="hover:text-brand-600 transition">Contact</a>
+        <nav class="hidden md:flex items-center gap-8 font-semibold text-gray-600">
+          <a href="#home" class="nav-link py-1">Home</a>
+          <a href="#catalog" class="nav-link py-1">Products &amp; Sizes</a>
+          <a href="#about" class="nav-link py-1">Factory Info</a>
+          <a href="#contact" class="nav-link py-1">Contact</a>
         </nav>
 
         <div class="hidden md:flex items-center gap-3">
-          <a href="https://wa.me/254724311026" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition inline-flex items-center gap-2 shadow-sm">
+          <a href="https://wa.me/254724311026" target="_blank" class="btn-zoom bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold inline-flex items-center gap-2 shadow-md hover:shadow-lg">
             <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Order
           </a>
         </div>
 
-        <button id="menu-btn" class="md:hidden p-2 text-gray-600 focus:outline-none">
+        <button id="menu-btn" class="md:hidden p-2 text-gray-600 focus:outline-none btn-zoom rounded-lg hover:bg-gray-100">
           <i class="fa-solid fa-bars text-2xl"></i>
         </button>
       </div>
     </div>
 
     <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
-      <a href="#home" class="mobile-link block py-2 text-gray-700 font-medium border-b border-gray-100">Home</a>
-      <a href="#catalog" class="mobile-link block py-2 text-gray-700 font-medium border-b border-gray-100">Products &amp; Sizes</a>
-      <a href="#about" class="mobile-link block py-2 text-gray-700 font-medium border-b border-gray-100">Factory Info</a>
-      <a href="#contact" class="mobile-link block py-2 text-gray-700 font-medium border-b border-gray-100">Contact</a>
-      <a href="https://wa.me/254724311026" target="_blank" class="flex items-center justify-center gap-2 bg-emerald-600 text-white py-3 rounded-lg font-semibold mt-2">
+      <a href="#home" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Home</a>
+      <a href="#catalog" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Products &amp; Sizes</a>
+      <a href="#about" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Factory Info</a>
+      <a href="#contact" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Contact</a>
+      <a href="https://wa.me/254724311026" target="_blank" class="btn-zoom flex items-center justify-center gap-2 bg-emerald-600 text-white py-3 rounded-xl font-semibold mt-2 shadow-md">
         <i class="fa-brands fa-whatsapp text-xl"></i> Order via WhatsApp
       </a>
     </div>
@@ -117,7 +142,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div class="space-y-6 text-center lg:text-left">
-          <div class="fade-up inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-emerald-300 text-xs font-semibold tracking-wide border border-white/10">
+          <div class="fade-up inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-emerald-300 text-xs font-semibold tracking-wide border border-white/10">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Direct Manufacturer
           </div>
 
@@ -130,11 +155,11 @@
           </p>
 
           <div style="animation-delay:1.1s" class="fade-up flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
-            <a href="#catalog" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-7 py-3.5 rounded-lg transition shadow-lg text-center">
+            <a href="#catalog" class="btn-zoom bg-brand-600 hover:bg-brand-700 text-white font-semibold px-7 py-3.5 rounded-xl shadow-lg text-center">
               Explore Products &amp; Sizes
             </a>
-            <a href="https://wa.me/254724311026" target="_blank" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-7 py-3.5 rounded-lg transition text-center flex items-center justify-center gap-2">
-              <i class="fa-brands fa-whatsapp"></i> Chat Sales Representative
+            <a href="https://wa.me/254724311026" target="_blank" class="btn-zoom bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-7 py-3.5 rounded-xl text-center flex items-center justify-center gap-2 backdrop-blur">
+              <i class="fa-brands fa-whatsapp text-lg"></i> Chat Sales Representative
             </a>
           </div>
         </div>
@@ -202,9 +227,9 @@
       </div>
 
       <div class="flex justify-center gap-2 mb-12 flex-wrap">
-        <button onclick="filterProducts('all', this)" class="filter-btn px-5 py-2 rounded-full font-medium text-sm transition bg-brand-600 text-white">All Products</button>
-        <button onclick="filterProducts('shopping', this)" class="filter-btn px-5 py-2 rounded-full font-medium text-sm transition bg-gray-100 text-gray-600 hover:bg-gray-200">Non Woven Shopping Bags (#15 - #28)</button>
-        <button onclick="filterProducts('specialty', this)" class="filter-btn px-5 py-2 rounded-full font-medium text-sm transition bg-gray-100 text-gray-600 hover:bg-gray-200">Duvet &amp; Suit Covers</button>
+        <button onclick="filterProducts('all', this)" class="filter-btn btn-zoom px-5 py-2.5 rounded-full font-semibold text-sm bg-brand-600 text-white shadow-md">All Products</button>
+        <button onclick="filterProducts('shopping', this)" class="filter-btn btn-zoom px-5 py-2.5 rounded-full font-semibold text-sm bg-gray-100 text-gray-600 hover:bg-gray-200">Non Woven Shopping Bags (#15 - #28)</button>
+        <button onclick="filterProducts('specialty', this)" class="filter-btn btn-zoom px-5 py-2.5 rounded-full font-semibold text-sm bg-gray-100 text-gray-600 hover:bg-gray-200">Duvet &amp; Suit Covers</button>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -219,7 +244,7 @@
               <h3 class="text-xl font-bold text-gray-900 mb-2">#15 Non Woven Shopping Bag (Red)</h3>
               <p class="text-sm text-gray-600 mb-4">A well-sized non woven shopping bag to suit customer's needs.</p>
             </div>
-            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2315%20Non%20Woven%20Shopping%20Bags" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
+            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2315%20Non%20Woven%20Shopping%20Bags" target="_blank" class="btn-zoom w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
           </div>
         </div>
 
@@ -234,7 +259,7 @@
               <h3 class="text-xl font-bold text-gray-900 mb-2">#15 Non Woven Bag (Ultra White)</h3>
               <p class="text-sm text-gray-600 mb-4">Suited for food deliveries, hotels, and cosmetics shops.</p>
             </div>
-            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2315%20Ultra%20White%20Non%20Woven%20Bags" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
+            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2315%20Ultra%20White%20Non%20Woven%20Bags" target="_blank" class="btn-zoom w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
           </div>
         </div>
 
@@ -249,7 +274,7 @@
               <h3 class="text-xl font-bold text-gray-900 mb-2">#22 Non Woven Shopping Bag</h3>
               <p class="text-sm text-gray-600 mb-4">The most used non woven shopping bag in the market. Carrying capacity 4kg.</p>
             </div>
-            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2322%20Non%20Woven%20Shopping%20Bags" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
+            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2322%20Non%20Woven%20Shopping%20Bags" target="_blank" class="btn-zoom w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
           </div>
         </div>
 
@@ -264,7 +289,7 @@
               <h3 class="text-xl font-bold text-gray-900 mb-2">#22 Heavy Non Woven Shopping Bag</h3>
               <p class="text-sm text-gray-600 mb-4">Designed to have high carrying capacity, suited for supermarkets, markets, and hardware shops.</p>
             </div>
-            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2322%20Heavy%20Non%20Woven%20Bags" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
+            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2322%20Heavy%20Non%20Woven%20Bags" target="_blank" class="btn-zoom w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
           </div>
         </div>
 
@@ -279,7 +304,7 @@
               <h3 class="text-xl font-bold text-gray-900 mb-2">#25 Non Woven Shopping Bag</h3>
               <p class="text-sm text-gray-600 mb-4">Suited for higher carrying capacity as it is big enough for larger goods.</p>
             </div>
-            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2325%20Non%20Woven%20Shopping%20Bags" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
+            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2325%20Non%20Woven%20Shopping%20Bags" target="_blank" class="btn-zoom w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
           </div>
         </div>
 
@@ -294,7 +319,7 @@
               <h3 class="text-xl font-bold text-gray-900 mb-2">#28 Heavy-Duty Non Woven Shopping Bag</h3>
               <p class="text-sm text-gray-600 mb-4">Our biggest and strongest bag that can carry up to 10kg, suited for supermarkets and heavy carrying loads.</p>
             </div>
-            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2328%20Non%20Woven%20Shopping%20Bags" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
+            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20%2328%20Non%20Woven%20Shopping%20Bags" target="_blank" class="btn-zoom w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
           </div>
         </div>
 
@@ -309,7 +334,7 @@
               <h3 class="text-xl font-bold text-gray-900 mb-2">Duvet Bag</h3>
               <p class="text-sm text-gray-600 mb-4">High quality 70gsm fabric with dimensions of 70cm by 98cm. Fits even the biggest duvet for complete protection.</p>
             </div>
-            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20Duvet%20Bags" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
+            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20Duvet%20Bags" target="_blank" class="btn-zoom w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
           </div>
         </div>
 
@@ -324,7 +349,7 @@
               <h3 class="text-xl font-bold text-gray-900 mb-2">Suit Bag</h3>
               <p class="text-sm text-gray-600 mb-4">Durable 70gsm non-woven fabric measuring 66cm by 92cm. Perfectly fitted for suits, coats, and formalwear protection.</p>
             </div>
-            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20Suit%20Bags" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
+            <a href="https://wa.me/254724311026?text=Inquiry%20about%20Azlon%20Suit%20Bags" target="_blank" class="btn-zoom w-full inline-flex items-center justify-center gap-2 bg-gray-900 hover:bg-brand-600 text-white font-semibold py-2.5 rounded-lg transition text-sm"><i class="fa-brands fa-whatsapp text-base"></i> Order via WhatsApp</a>
           </div>
         </div>
       </div>
@@ -338,7 +363,7 @@
       <p class="text-gray-600 leading-relaxed mb-6">
         Eastern bypass, kamakis, ruiru. We serve small traders, retailers, distributors, wholesalers, and supermarkets with high-quality non woven bags (uhuru bags) and specialty covers. All products are well-sealed with zero rejects.
       </p>
-      <a href="tel:+254724311026" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-6 py-3 rounded-lg transition">
+      <a href="tel:+254724311026" class="btn-zoom inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-bold px-6 py-3 rounded-xl transition shadow-md">
         <i class="fa-solid fa-phone"></i> Call Factory Sales: 0724 311 026
       </a>
     </div>
@@ -385,15 +410,15 @@
         <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Connect With Us</span>
         <div class="flex items-center justify-center gap-5">
           <!-- Facebook Official -->
-          <a href="https://www.facebook.com/azlonlimited/" target="_blank" rel="noopener noreferrer" class="btn-facebook w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition" title="Facebook">
+          <a href="https://www.facebook.com/azlonlimited/" target="_blank" rel="noopener noreferrer" class="btn-facebook btn-zoom w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition" title="Facebook">
             <i class="fa-brands fa-facebook-f text-lg"></i>
           </a>
           <!-- Instagram Official -->
-          <a href="https://www.instagram.com/azlonlimited/" target="_blank" rel="noopener noreferrer" class="btn-instagram w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition" title="Instagram">
+          <a href="https://www.instagram.com/azlonlimited/" target="_blank" rel="noopener noreferrer" class="btn-instagram btn-zoom w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition" title="Instagram">
             <i class="fa-brands fa-instagram text-lg"></i>
           </a>
           <!-- TikTok Official -->
-          <a href="https://www.tiktok.com/@azlonkenya" target="_blank" rel="noopener noreferrer" class="btn-tiktok w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition" title="TikTok">
+          <a href="https://www.tiktok.com/@azlonkenya" target="_blank" rel="noopener noreferrer" class="btn-tiktok btn-zoom w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition" title="TikTok">
             <i class="fa-brands fa-tiktok text-lg"></i>
           </a>
         </div>
@@ -431,10 +456,10 @@
       });
 
       document.querySelectorAll('.filter-btn').forEach(b => {
-        b.className = 'filter-btn px-5 py-2 rounded-full font-medium text-sm transition bg-gray-100 text-gray-600 hover:bg-gray-200';
+        b.className = 'filter-btn btn-zoom px-5 py-2.5 rounded-full font-semibold text-sm bg-gray-100 text-gray-600 hover:bg-gray-200';
       });
 
-      btn.className = 'filter-btn px-5 py-2 rounded-full font-medium text-sm transition bg-brand-600 text-white';
+      btn.className = 'filter-btn btn-zoom px-5 py-2.5 rounded-full font-semibold text-sm bg-brand-600 text-white shadow-md';
     }
 
     // Hero title animation
