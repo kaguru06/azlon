@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News & Announcements | Azlon Limited - Ruiru, Kenya</title>
+  
+  <!-- SEO & Social Open Graph -->
+  <meta name="description" content="Latest news and factory announcements from Azlon Limited in Ruiru, Kamakis.">
+  <meta name="theme-color" content="#16a34a">
+  <link rel="canonical" href="https://azlonkenya.com/news.html">
+  <meta property="og:title" content="News & Announcements | Azlon Limited">
+  <meta property="og:description" content="Read our latest factory updates and holiday announcements.">
+  <meta property="og:image" content="https://azlonkenya.com/mashujaa-poster.png">
+  <meta property="og:url" content="https://azlonkenya.com/news.html">
+  <meta property="og:type" content="website">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
@@ -46,7 +57,7 @@
           </div>
           <div>
             <span class="text-xl font-black tracking-tight text-gray-900 block leading-none">AZLON LIMITED</span>
-            <span class="text-[10px] text-brand-700 font-bold uppercase tracking-wider block mt-0.5">Non Woven Bags Manufacturer</span>
+            <span class="text-[11px] text-brand-700 font-bold uppercase tracking-wider block mt-0.5">Non Woven Bags Manufacturer</span>
           </div>
         </a>
 
@@ -59,11 +70,26 @@
         </nav>
 
         <div class="hidden md:flex items-center gap-3">
-          <a href="https://wa.me/254724311026" target="_blank" class="btn-zoom bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold inline-flex items-center gap-2 shadow-md">
+          <a href="https://wa.me/254724311026" target="_blank" rel="noopener noreferrer" class="btn-zoom bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold inline-flex items-center gap-2 shadow-md">
             <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Order
           </a>
         </div>
+
+        <button id="menu-btn" aria-label="Toggle navigation menu" class="md:hidden p-2 text-gray-600 focus:outline-none btn-zoom rounded-lg hover:bg-gray-100">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
       </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+      <a href="index.html#home" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Home</a>
+      <a href="index.html#catalog" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Products &amp; Sizes</a>
+      <a href="index.html#about" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Factory Info</a>
+      <a href="news.html" class="mobile-link block py-2.5 text-emerald-700 font-bold border-b border-gray-100">News &amp; Updates</a>
+      <a href="index.html#contact" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Contact</a>
+      <a href="https://wa.me/254724311026" target="_blank" rel="noopener noreferrer" class="btn-zoom flex items-center justify-center gap-2 bg-emerald-600 text-white py-3 rounded-xl font-semibold mt-2 shadow-md">
+        <i class="fa-brands fa-whatsapp text-xl"></i> Order via WhatsApp
+      </a>
     </div>
   </header>
 
@@ -78,7 +104,7 @@
   <!-- News Feed Container -->
   <main class="flex-1 max-w-3xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
 
-    <!-- ANNOUNCEMENT CARD: MASHUJAA DAY (With Auto-Archive Script) -->
+    <!-- ANNOUNCEMENT CARD: MASHUJAA DAY -->
     <article class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition">
       <div class="bg-gradient-to-r from-red-600 via-green-600 to-black p-1.5"></div>
       
@@ -92,11 +118,11 @@
 
         <!-- Poster Image Container (.png format) -->
         <div class="mb-6 rounded-2xl overflow-hidden border border-gray-200 shadow-md bg-gray-900 flex items-center justify-center">
-          <img src="mashujaa-poster.png" alt="Azlon Limited Happy Mashujaa Day Poster" class="w-full h-auto object-cover">
+          <img src="mashujaa-poster.png" alt="Azlon Limited Happy Mashujaa Day Poster" loading="lazy" class="w-full h-auto object-cover">
         </div>
 
         <p class="text-gray-600 leading-relaxed mb-4">
-          Today, as Kenya celebrates Mashujaa Day, Azlon Limited extends our warmest wishes to all our valued customers, retail partners, wholesalers, distributors, and business communities across the nation.
+          Today, as Kenya celebrates Mashujaa Day, Azlon Limited extend our warmest wishes to all our valued customers, retail partners, wholesalers, distributors, and business communities across the nation.
         </p>
 
         <p class="text-gray-600 leading-relaxed mb-6">
@@ -105,7 +131,7 @@
 
         <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-gray-100">
           <span class="text-xs text-gray-500 font-medium">Ready to place an order or inquire about stock?</span>
-          <a href="https://wa.me/254724311026?text=Happy%20Mashujaa%20Day!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn-zoom inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-4 py-2.5 rounded-xl shadow">
+          <a href="https://wa.me/254724311026?text=Happy%20Mashujaa%20Day!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn-zoom inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-4 py-2.5 rounded-xl shadow">
             <i class="fa-brands fa-whatsapp text-sm"></i> Chat on WhatsApp
           </a>
         </div>
@@ -117,12 +143,32 @@
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-8 border-t border-gray-800 text-center text-xs text-gray-500">
     <div class="max-w-7xl mx-auto px-4">
-      &copy; Azlon Limited. All rights reserved. Eastern bypass, Kamakis, Ruiru, Kenya.
+      &copy; <span id="year"></span> Azlon Limited. All rights reserved. Eastern bypass, Kamakis, Ruiru, Kenya.
     </div>
   </footer>
 
-  <!-- Auto-Archive Script (Turns into archived badge right after October 20, 2026) -->
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/254724311026" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- Scripts -->
   <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if(menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    }
+
+    // Close mobile menu when a navigation link is clicked
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Auto-archive badge right after October 20, 2026 ends
     const now = new Date();
     const expiryDate = new Date('2026-10-20T23:59:59');
     if (now > expiryDate) {
