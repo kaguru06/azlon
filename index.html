@@ -70,11 +70,6 @@
     }
   </script>
   <style>
-    /* Force Times New Roman globally while preserving font sizes */
-    body, h1, h2, h3, h4, h5, h6, p, a, span, button {
-      font-family: 'Times New Roman', Times, serif !important;
-    }
-
     html{scroll-behavior:smooth}
     @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
     @keyframes wordIn{from{opacity:0;transform:translateY(60%) rotate(4deg);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
@@ -133,7 +128,7 @@
     </div>
   </div>
 
-  <!-- Header / Navigation -->
+  <!-- Header / Navigation (Sticky offset padding support) -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
