@@ -78,13 +78,13 @@
   <!-- News Feed Container -->
   <main class="flex-1 max-w-3xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
 
-    <!-- ANNOUNCEMENT CARD: MASHUJAA DAY (With Poster Image) -->
+    <!-- ANNOUNCEMENT CARD: MASHUJAA DAY (With Auto-Archive Script) -->
     <article class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition">
       <div class="bg-gradient-to-r from-red-600 via-green-600 to-black p-1.5"></div>
       
       <div class="p-6 sm:p-8">
         <div class="flex items-center justify-between gap-4 text-xs text-gray-500 mb-4">
-          <span class="bg-brand-100 text-brand-800 font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-flag text-xs"></i> National Holiday Notice</span>
+          <span id="holiday-badge" class="bg-brand-100 text-brand-800 font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-flag text-xs"></i> National Holiday Notice</span>
           <span>October 20, 2026</span>
         </div>
 
@@ -96,16 +96,16 @@
         </div>
 
         <p class="text-gray-600 leading-relaxed mb-4">
-          Today, as Kenya celebrates Mashujaa Day, Azlon Limited extend our warmest wishes to all our valued customers, retail partners, wholesalers, distributors, and business communities across the nation.
+          Today, as Kenya celebrates Mashujaa Day, Azlon Limited extends our warmest wishes to all our valued customers, retail partners, wholesalers, distributors, and business communities across the nation.
         </p>
 
         <p class="text-gray-600 leading-relaxed mb-6">
-          We salute the extraordinary everyday heroes
+          We salute the extraordinary everyday heroes who drive our economy forward. Please note that our factory remained open to serve all your urgent bag orders during the holiday.
         </p>
 
         <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-gray-100">
           <span class="text-xs text-gray-500 font-medium">Ready to place an order or inquire about stock?</span>
-          <a href="https://wa.me/254724311026?text=Happy%20Mashujaa%20Day!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn-zoom inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-4 py-2.5 rounded-xl shadow">
+          <a href="https://wa.me/254724311026?text=Inquiry%20regarding%20orders." target="_blank" class="btn-zoom inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-4 py-2.5 rounded-xl shadow">
             <i class="fa-brands fa-whatsapp text-sm"></i> Chat on WhatsApp
           </a>
         </div>
@@ -120,6 +120,19 @@
       &copy; Azlon Limited. All rights reserved. Eastern bypass, Kamakis, Ruiru, Kenya.
     </div>
   </footer>
+
+  <!-- Auto-Archive Script -->
+  <script>
+    const today = new Date();
+    const expiryDate = new Date('2026-10-20T23:59:59');
+    if (today > expiryDate) {
+      const badge = document.getElementById('holiday-badge');
+      if (badge) {
+        badge.className = "bg-gray-200 text-gray-700 font-bold px-3 py-1 rounded-full";
+        badge.innerHTML = '<i class="fa-solid fa-box-archive text-xs"></i> Archived Event (Oct 20, 2026)';
+      }
+    }
+  </script>
 
 </body>
 </html>
