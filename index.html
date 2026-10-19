@@ -84,10 +84,10 @@
 <body class="bg-gray-50 text-gray-800 antialiased font-sans">
   <div id="progress"></div>
 
-  <!-- Auto-Expiring Top Announcement Banner for Mashujaa Day -->
-  <div id="mashujaa-banner" class="relative z-50 bg-gradient-to-r from-red-700 via-green-800 to-black text-white text-xs sm:text-sm font-semibold py-2.5 px-4 text-center shadow-md border-b border-emerald-500/30">
+  <!-- Top Announcement Banner (Active from Oct 19 midnight through Oct 20) -->
+  <div id="mashujaa-banner" style="display: none;" class="relative z-50 bg-gradient-to-r from-red-700 via-green-800 to-black text-white text-xs sm:text-sm font-semibold py-2.5 px-4 text-center shadow-md border-b border-emerald-500/30">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3">
-      <span>🇰🇪 <strong>Happy Mashujaa Day!</strong> We remain <strong>OPEN</strong> today to serve all your bag orders!</span>
+      <span>🇰🇪 <strong>Happy Mashujaa Day!</strong> We remain <strong>OPEN</strong> on Mashujaa Day to serve all your bag orders!</span>
       <a href="news.html" class="inline-flex items-center gap-1 bg-white text-emerald-900 hover:bg-emerald-100 font-bold px-3 py-1 rounded-full transition shadow-sm text-xs mt-1 sm:mt-0">
         View Announcement &amp; Poster &rarr;
       </a>
@@ -496,12 +496,18 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Auto-hide Mashujaa Day banner after October 20, 2026
-    const today = new Date();
+    // Auto-show banner starting October 19, 2026 at 00:00, and auto-hide after October 20, 2026 at 23:59:59
+    const now = new Date();
+    const startDate = new Date('2026-10-19T00:00:00');
     const expiryDate = new Date('2026-10-20T23:59:59');
-    if (today > expiryDate) {
-      const banner = document.getElementById('mashujaa-banner');
-      if (banner) banner.style.display = 'none';
+    
+    const banner = document.getElementById('mashujaa-banner');
+    if (banner) {
+      if (now >= startDate && now <= expiryDate) {
+        banner.style.display = 'block';
+      } else {
+        banner.style.display = 'none';
+      }
     }
 
     // Mobile menu toggle
