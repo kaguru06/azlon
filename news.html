@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Announcements | Azlon Limited - Ruiru, Kenya</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .btn-zoom { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+    .btn-zoom:hover { transform: scale(1.05); }
+    .btn-zoom:active { transform: scale(0.96); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased font-sans flex flex-col min-h-screen">
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur shadow-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo AZ Combination Mark -->
+        <a href="index.html" class="flex items-center gap-3.5 group transition transform hover:scale-105 duration-200">
+          <div class="w-11 h-11 bg-gradient-to-br from-brand-600 via-emerald-600 to-brand-800 rounded-xl flex items-center justify-center text-white shadow-md">
+            <svg class="w-7 h-7 text-white" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 22 78 L 50 18 L 78 78 L 62 78 L 50 50 L 38 78 Z" fill="currentColor"/>
+              <path d="M 32 38 L 68 38 L 32 68 L 68 68" stroke="#10b981" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-black tracking-tight text-gray-900 block leading-none">AZLON LIMITED</span>
+            <span class="text-[10px] text-brand-700 font-bold uppercase tracking-wider block mt-0.5">Non Woven Bags Manufacturer</span>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 font-semibold text-gray-600">
+          <a href="index.html#home" class="hover:text-brand-600">Home</a>
+          <a href="index.html#catalog" class="hover:text-brand-600">Products &amp; Sizes</a>
+          <a href="index.html#about" class="hover:text-brand-600">Factory Info</a>
+          <a href="news.html" class="text-brand-600 font-bold">News &amp; Updates</a>
+          <a href="index.html#contact" class="hover:text-brand-600">Contact</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://wa.me/254724311026" target="_blank" class="btn-zoom bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold inline-flex items-center gap-2 shadow-md">
+            <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Order
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Header -->
+  <section class="bg-brand-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Latest News &amp; Factory Announcements</h1>
+      <p class="mt-2 text-emerald-200 text-sm max-w-xl mx-auto">Stay updated with holiday messages, manufacturing schedules, and direct factory news from Azlon Limited in Ruiru.</p>
+    </div>
+  </section>
+
+  <!-- News Feed Container -->
+  <main class="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+
+    <!-- ANNOUNCEMENT CARD: MASHUJAA DAY (With Poster Image) -->
+    <article class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition">
+      <div class="bg-gradient-to-r from-red-600 via-green-600 to-black p-1.5"></div>
+      
+      <div class="p-6 sm:p-8">
+        <div class="flex items-center justify-between gap-4 text-xs text-gray-500 mb-4">
+          <span class="bg-brand-100 text-brand-800 font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-flag text-xs"></i> National Holiday</span>
+          <span>October 20, 2026</span>
+        </div>
+
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Happy Mashujaa Day from Azlon Limited! 🇰🇪</h2>
+
+        <!-- Poster Image Container -->
+        <div class="mb-6 rounded-xl overflow-hidden border border-gray-200 shadow-sm max-h-[500px] bg-gray-100 flex items-center justify-center">
+          <img src="mashujaa-poster.jpg" alt="Azlon Limited Happy Mashujaa Day Poster" class="w-full h-auto object-contain max-h-[500px]">
+        </div>
+
+        <p class="text-gray-600 leading-relaxed mb-4">
+          Today, as Kenya celebrates <strong>Mashujaa Day</strong>, the management and staff of <strong>Azlon Limited</strong> extend our warmest wishes to all our valued customers, retail partners, wholesalers, distributors, and business communities across the nation.
+        </p>
+
+        <p class="text-gray-600 leading-relaxed mb-4">
+          We salute the extraordinary everyday heroes—the hardworking traders, entrepreneurs, and logistics teams who drive Kenya’s economy forward every day.
+        </p>
+
+        <div class="bg-brand-50 border-l-4 border-brand-600 p-4 rounded-r-xl my-6">
+          <h4 class="font-bold text-brand-900 text-sm mb-1"><i class="fa-solid fa-circle-info"></i> Holiday Factory Schedule Notice:</h4>
+          <p class="text-xs text-brand-800">
+            In honor of Mashujaa Day, our manufacturing unit and sales depot in Ruiru will operate under holiday dispatch schedules on <strong>Tuesday, October 20th</strong>. Direct inquiries and orders via WhatsApp will remain active throughout the day.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-gray-100">
+          <span class="text-xs text-gray-500 font-medium">Have questions or urgent order inquiries?</span>
+          <a href="https://wa.me/254724311026?text=Happy%20Mashujaa%20Day!%20Inquiry%20regarding%20orders." target="_blank" class="btn-zoom inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-4 py-2.5 rounded-xl shadow">
+            <i class="fa-brands fa-whatsapp text-sm"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-8 border-t border-gray-800 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto px-4">
+      &copy; Azlon Limited. All rights reserved. Eastern bypass, Kamakis, Ruiru, Kenya.
+    </div>
+  </footer>
+
+</body>
+</html>
