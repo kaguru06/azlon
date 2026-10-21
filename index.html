@@ -151,10 +151,6 @@
           <a href="#catalog" class="nav-link py-1">Products &amp; Sizes</a>
           <a href="#about" class="nav-link py-1">Factory Info</a>
           <a href="news.html" class="nav-link py-1 text-emerald-700 font-bold hover:text-emerald-800">News &amp; Updates</a>
-          <!-- Archived Announcement Trigger Link -->
-          <button id="archive-modal-btn" class="nav-link py-1 text-xs text-gray-500 hover:text-gray-800 bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
-            🇰🇪 Past Announcements
-          </button>
           <a href="#location" class="nav-link py-1">Find Us</a>
           <a href="#contact" class="nav-link py-1">Contact</a>
         </nav>
@@ -176,9 +172,6 @@
       <a href="#catalog" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Products &amp; Sizes</a>
       <a href="#about" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Factory Info</a>
       <a href="news.html" class="mobile-link block py-2.5 text-emerald-700 font-bold border-b border-gray-100">News &amp; Updates</a>
-      <button id="mobile-archive-modal-btn" class="w-full text-left py-2.5 text-xs text-gray-600 border-b border-gray-100 font-medium">
-        🇰🇪 View Archived Announcements
-      </button>
       <a href="#location" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Find Us</a>
       <a href="#contact" class="mobile-link block py-2.5 text-gray-700 font-medium border-b border-gray-100 hover:text-brand-600">Contact</a>
       <a href="https://wa.me/254724311026" target="_blank" rel="noopener noreferrer" class="btn-zoom flex items-center justify-center gap-2 bg-emerald-600 text-white py-3 rounded-xl font-semibold mt-2 shadow-md">
@@ -186,32 +179,6 @@
       </a>
     </div>
   </header>
-
-  <!-- Archived Mashujaa Announcement Modal Popup -->
-  <div id="archive-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl border border-gray-200 animate-fade-in">
-      <div class="bg-gradient-to-r from-red-700 via-green-800 to-black text-white p-5 relative">
-        <button id="close-modal-btn" class="absolute top-4 right-4 text-white/80 hover:text-white text-xl font-bold focus:outline-none">
-          <i class="fa-solid fa-xmark text-2xl"></i>
-        </button>
-        <span class="inline-block bg-white/20 text-white text-[10px] uppercase font-bold tracking-widest px-2.5 py-0.5 rounded-full mb-2">Archived Announcement</span>
-        <h3 class="text-xl font-extrabold">🇰🇪 Happy Mashujaa Day!</h3>
-      </div>
-      <div class="p-6 space-y-4 text-gray-700 text-sm">
-        <p class="leading-relaxed">
-          We remain <strong>OPEN</strong> on Mashujaa Day to serve all your non-woven bag orders across Kenya!
-        </p>
-        <div class="pt-2 flex items-center justify-between border-t border-gray-100">
-          <a href="news.html" class="inline-flex items-center gap-1.5 text-emerald-700 hover:text-emerald-800 font-bold text-xs">
-            View Announcement Poster &rarr;
-          </a>
-          <button id="modal-close-action" class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-xl text-xs font-semibold">
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Hero Section -->
   <section id="home" class="relative text-white py-20 lg:py-24 overflow-hidden scroll-mt-20"
@@ -531,7 +498,7 @@
     </div>
   </footer>
 
-  <!-- Interactive JavaScript for Mobile Menu, Catalog Filters, & Modal Archive -->
+  <!-- Interactive JavaScript for Mobile Menu & Catalog Filters -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const menuBtn = document.getElementById('menu-btn');
@@ -548,34 +515,6 @@
           link.addEventListener('click', function() {
             mobileMenu.classList.add('hidden');
           });
-        });
-      }
-
-      // Archive Modal Functionality
-      const modal = document.getElementById('archive-modal');
-      const openBtn = document.getElementById('archive-modal-btn');
-      const openMobileBtn = document.getElementById('mobile-archive-modal-btn');
-      const closeBtn = document.getElementById('close-modal-btn');
-      const closeActionBtn = document.getElementById('modal-close-action');
-
-      function openModal() {
-        if (modal) modal.classList.remove('hidden');
-        if (mobileMenu) mobileMenu.classList.add('hidden');
-      }
-
-      function closeModal() {
-        if (modal) modal.classList.add('hidden');
-      }
-
-      if (openBtn) openBtn.addEventListener('click', openModal);
-      if (openMobileBtn) openMobileBtn.addEventListener('click', openModal);
-      if (closeBtn) closeBtn.addEventListener('click', closeModal);
-      if (closeActionBtn) closeActionBtn.addEventListener('click', closeModal);
-
-      // Close modal on background overlay click
-      if (modal) {
-        modal.addEventListener('click', function(e) {
-          if (e.target === modal) closeModal();
         });
       }
     });
