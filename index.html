@@ -507,5 +507,51 @@
       </div>
     </div>
   </footer>
+
+  <!-- Interactive JavaScript for Mobile Menu and Catalog Filters -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      // Toggle mobile menu visibility
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking on any mobile navigation link
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+          });
+        });
+      }
+    });
+
+    // Product Catalog Filtering Function
+    function filterProducts(category, buttonElement) {
+      const cards = document.querySelectorAll('.product-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      // Update button active styling
+      buttons.forEach(btn => {
+        btn.className = 'filter-btn btn-zoom px-5 py-2.5 rounded-full font-semibold text-sm bg-gray-100 text-gray-600 hover:bg-gray-200';
+      });
+      if (buttonElement) {
+        buttonElement.className = 'filter-btn btn-zoom px-5 py-2.5 rounded-full font-semibold text-sm bg-brand-600 text-white shadow-md';
+      }
+
+      // Filter product cards
+      cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
