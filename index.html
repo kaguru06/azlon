@@ -524,6 +524,26 @@
     </div>
   </footer>
 
+  <!-- Sticky Floating Mobile & Desktop Call/WhatsApp Widget -->
+  <div class="fixed bottom-5 right-5 z-50 flex flex-col gap-3 items-end">
+    <!-- Click-to-Call Button (Visible on Mobile Only) -->
+    <a href="tel:+254724311026" 
+       aria-label="Call Factory Sales"
+       class="md:hidden w-13 h-13 bg-brand-800 text-white rounded-full shadow-2xl hover:bg-brand-900 transition-all duration-300 transform hover:scale-110 active:scale-95 flex items-center justify-center border-2 border-white/20">
+      <i class="fa-solid fa-phone text-xl"></i>
+    </a>
+
+    <!-- Floating WhatsApp Order Button -->
+    <a href="https://wa.me/254724311026?text=Hello%20Azlon%20Limited,%20I%20want%20to%20make%20an%20inquiry%20about%20your%20bags." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Order via WhatsApp"
+       class="bg-emerald-600 text-white rounded-full shadow-2xl hover:bg-emerald-700 transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2.5 px-4 py-3 border-2 border-white/20">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+      <span class="text-xs font-bold tracking-wide pr-1 hidden sm:inline">Order via WhatsApp</span>
+    </a>
+  </div>
+
   <!-- Interactive JavaScript for Mobile Menu and Catalog Filters -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
