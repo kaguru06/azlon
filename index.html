@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics Tag (gtag.js) -->
+  <!-- Google tag (gtag.js): Google Analytics + Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CEQ3PNBWCC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -9,21 +9,7 @@
     gtag('js', new Date());
 
     gtag('config', 'G-CEQ3PNBWCC');
-  </script>
-
-  <!-- Google Ads Tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-782820309"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
     gtag('config', 'AW-782820309');
-  </script>
-
-  <!-- Event snippet for Contact Us form submission on Website, through Smart Campaign conversion page -->
-  <script>
-    gtag('event', 'conversion', {'send_to': 'AW-782820309/vHlwCNzx340BENXHo_UC'});
   </script>
 
   <!-- Elfsight Google Reviews Script -->
@@ -554,6 +540,17 @@
           link.addEventListener('click', function() {
             mobileMenu.classList.add('hidden');
           });
+        });
+      }
+    });
+
+    // Google Ads conversion: count a lead only when a visitor taps a WhatsApp or Call button
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href^="https://wa.me"], a[href^="tel:"]');
+      if (link && typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-782820309/vHlwCNzx340BENXHo_UC',
+          'transport_type': 'beacon'
         });
       }
     });
